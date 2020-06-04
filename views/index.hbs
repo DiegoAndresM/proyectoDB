@@ -1,0 +1,34 @@
+{{> header}}
+
+<div class="contenedor">
+    <center><h1 class="h1">TARANTINO MOVIES</h1></center>
+    {{#if pintores}}
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Nombre</td>
+                    <td>Duracion</td>
+                    <td>Estreno</td>
+                    <td>Poster</td>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each pintores}}
+                 <tr>
+                     <td>{{_id}}</td>
+                     <td>{{name}}</td>
+                     <td>{{duracion}}</td>
+                     <td>{{estreno}}</td>
+                     <td><img src="../images/{{poster}}" width="60%"></td>
+                 </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    {{else}}
+    <div>No se encuentran peliculas</div>
+    {{/if}}
+
+</div>
+</body>
+{{> footer}}
